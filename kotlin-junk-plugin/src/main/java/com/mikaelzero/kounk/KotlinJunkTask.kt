@@ -100,7 +100,7 @@ internal open class KotlinJunkTask : DefaultTask() {
 
     fun generateNormalClass(packageName: String, className: String) {
         var javaDir = File(outDir, "java")
-        val type = random.nextInt(2)
+        val type = random.nextInt(3)
         val file = FileSpec.builder(packageName, className)
             .addType(
                 when (type) {

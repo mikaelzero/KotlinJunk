@@ -23,6 +23,28 @@ apply plugin: 'com.didiglobal.booster'
 
 # Features
 
+### interface
+
+```kotlin
+public interface Qpkrqbwobqtirda {
+  public val olfetgcyzyticvj: String
+
+  public fun qwasqwehyixrcts(): Unit
+}
+
+```
+
+### enum
+
+```kotlin
+public enum class Xvyzisavepnmjhj {
+  JKAMHQRCFMLVEDX,
+  TASOFLCHZDLYQUU,
+  OSYKOMAGGSXECRV,
+}
+
+```
+
 ### Activity
 
 ```kotlin
