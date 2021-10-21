@@ -14,7 +14,7 @@ allprojects {
 
 dependencies {
     classpath "com.didiglobal.booster:booster-gradle-plugin:$booster_version"
-    classpath "com.github.mikaelzero:KotlinJunk:0.1"
+    classpath "com.github.mikaelzero:KotlinJunk:1.0"
 }
 
 
