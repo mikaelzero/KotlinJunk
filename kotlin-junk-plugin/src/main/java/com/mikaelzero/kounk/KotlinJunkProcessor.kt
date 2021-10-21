@@ -1,6 +1,7 @@
 package com.mikaelzero.kounk
 
 
+import com.android.build.gradle.AppExtension
 import com.android.build.gradle.api.BaseVariant
 import com.android.build.gradle.internal.tasks.factory.dependsOn
 import com.didiglobal.booster.gradle.javaCompilerTaskProvider
@@ -23,6 +24,8 @@ class AndroidJunkVariantProcessor : VariantProcessor {
         val javaDir = File(dir, "java")
         val mainManifestFile = variant.sourceSets.firstOrNull { it.name == "main" }?.manifestFile
         val packageName = XmlParser().parse(mainManifestFile).attribute("package")
+        val appExtension = variant.project.extensions.getByType(AppExtension::class.java)
+        val manifestFile = File(dir, "AndroidManifest.xml")
 
         val tasks = variant.project.tasks
         tasks.create("android${variant.name.capitalize()}Junk", KotlinJunkTask::class.java) {
@@ -33,6 +36,15 @@ class AndroidJunkVariantProcessor : VariantProcessor {
             it.countFlag = variant.project.findProperty(PROPERTY_COUNT)?.toString()?.toInt() ?: 10
         }.also {
             variant.javaCompilerTaskProvider.dependsOn(it)
+
+            //合并AndroidManifest文件
+            variant.sourceSets.forEach { sourceSet ->
+                if (!sourceSet.manifestFile.exists()) {
+                    appExtension.sourceSets.maybeCreate(sourceSet.name).manifest.srcFile(manifestFile.absolutePath)
+                    return@forEach
+                }
+            }
+
             //将生成的类的目录添加到sourceSets中
             val generatedResFolders = variant.project.files(resDir).builtBy(it)
             variant.registerGeneratedResFolders(generatedResFolders)
