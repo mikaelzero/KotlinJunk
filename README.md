@@ -18,7 +18,11 @@ dependencies {
 }
 
 
-apply plugin: 'com.didiglobal.booster' 
+apply plugin: 'com.didiglobal.booster'
+
+
+//in gradle.properties
+kotlinJunkCount = 10
 ```
 
 # Features
@@ -27,9 +31,9 @@ apply plugin: 'com.didiglobal.booster'
 
 ```kotlin
 public interface Qpkrqbwobqtirda {
-  public val olfetgcyzyticvj: String
+    public val olfetgcyzyticvj: String
 
-  public fun qwasqwehyixrcts(): Unit
+    public fun qwasqwehyixrcts(): Unit
 }
 
 ```
@@ -38,9 +42,9 @@ public interface Qpkrqbwobqtirda {
 
 ```kotlin
 public enum class Xvyzisavepnmjhj {
-  JKAMHQRCFMLVEDX,
-  TASOFLCHZDLYQUU,
-  OSYKOMAGGSXECRV,
+    JKAMHQRCFMLVEDX,
+    TASOFLCHZDLYQUU,
+    OSYKOMAGGSXECRV,
 }
 
 ```
@@ -84,24 +88,10 @@ public fun Int.pyfmptxwulfnyue(): Int = if (this < 0) -this else this
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp"
-    android:height="108dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
-    <path
-        android:fillColor="#3DDC84"
-        android:pathData="M0,0h108v108h-108z" />
-    <path
-        android:fillColor="#00000000"
-        android:pathData="M9,0L9,108"
-        android:strokeWidth="0.8"
-        android:strokeColor="#33FFFFFF" />
-    <path
-        android:fillColor="#00000000"
-        android:pathData="M39,0L39,09"
-        android:strokeWidth="4"
-        android:strokeColor="#924853" />
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#3DDC84" android:pathData="M0,0h108v108h-108z" />
+    <path android:fillColor="#00000000" android:pathData="M9,0L9,108" android:strokeWidth="0.8" android:strokeColor="#33FFFFFF" />
+    <path android:fillColor="#00000000" android:pathData="M39,0L39,09" android:strokeWidth="4" android:strokeColor="#924853" />
 </vector>
 ```
 
@@ -109,34 +99,22 @@ public fun Int.pyfmptxwulfnyue(): Int = if (this < 0) -this else this
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:gravity="center" android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="dldwmrivxrslrwl" />
+    <TextView android:id="@+id/textview_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="dldwmrivxrslrwl" />
 
-    <Button
-        android:id="@+id/button_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="fbxjfmolftemxyy" />
+    <Button android:id="@+id/button_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="fbxjfmolftemxyy" />
 </LinearLayout>
 ```
 
 ### String
 
 ```xml
+
 <resources>
-<string name="kounk_akpbda0">eulfsjtkrythryy</string>
-<string name="kounk_rntuhb1">hiflhinowuwwcno</string>
-<string name="kounk_ccehhc2">zucgtoqvqxxcsaw</string>
+    <string name="kounk_akpbda0">eulfsjtkrythryy</string>
+    <string name="kounk_rntuhb1">hiflhinowuwwcno</string>
+    <string name="kounk_ccehhc2">zucgtoqvqxxcsaw</string>
 </resources>
 ```
 
