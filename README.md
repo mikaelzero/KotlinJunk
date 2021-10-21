@@ -45,6 +45,12 @@ public enum class Xvyzisavepnmjhj {
 
 ```
 
+### object
+
+```kotlin
+public object Kryoje4
+```
+
 ### Activity
 
 ```kotlin
