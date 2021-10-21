@@ -4,6 +4,7 @@ buildscript {
         booster_version = '4.0.0'
     }
     repositories {
+        maven { url 'https://jitpack.io' }
         mavenLocal()
         google()
         mavenCentral()
@@ -15,6 +16,8 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21"
         classpath "com.didiglobal.booster:booster-gradle-plugin:$booster_version"
         classpath "com.github.dcendents:android-maven-gradle-plugin:2.1"
+        classpath "com.github.mikaelzero:KotlinJunk:0.1"
+
     }
 }
 
