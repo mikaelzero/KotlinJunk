@@ -59,11 +59,11 @@ internal open class KotlinJunkTask : DefaultTask() {
     }
 
     fun generateRes() {
-        for (x in 0 until countFlag) {
+        for (x in 0 until countFlag * 2) {
             val drawableName = "${resPrefix.toLowerCase()}${generateName(x)}"
             generateDrawable(drawableName)
         }
-        for (x in 0 until countFlag * 2) {
+        for (x in 0 until countFlag * 3) {
             val name = "${resPrefix.toLowerCase()}${generateName(x)}"
             addStringByFileIo(name, getRandomString())
         }

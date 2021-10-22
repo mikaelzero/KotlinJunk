@@ -9,6 +9,7 @@ import com.didiglobal.booster.gradle.project
 import com.didiglobal.booster.task.spi.VariantProcessor
 import com.google.auto.service.AutoService
 import groovy.util.XmlParser
+import org.gradle.api.tasks.SourceTask
 import java.io.File
 
 /**
@@ -50,6 +51,13 @@ class AndroidJunkVariantProcessor : VariantProcessor {
             variant.registerGeneratedResFolders(generatedResFolders)
             variant.mergeResourcesProvider.dependsOn(it)
             variant.registerJavaGeneratingTask(it, javaDir)
+
+            val kotlinCompileTask = tasks.findByName("compile${variant.name.capitalize()}Kotlin") as? SourceTask
+            if (kotlinCompileTask != null) {
+                kotlinCompileTask.dependsOn(it)
+                val srcSet = variant.project.objects.sourceDirectorySet("kotlin", "kotlin").srcDir(javaDir)
+                kotlinCompileTask.source(srcSet)
+            }
         }
     }
 }
