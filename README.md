@@ -1,4 +1,6 @@
-# KotlinJunk
+
+
+ [![](https://jitpack.io/v/mikaelzero/KotlinJunk.svg)](https://jitpack.io/#mikaelzero/KotlinJunk)
 
 generate junk kotlin code in android
 
@@ -14,7 +16,7 @@ allprojects {
 
 dependencies {
     classpath "com.didiglobal.booster:booster-gradle-plugin:$booster_version"
-    classpath "com.github.mikaelzero:KotlinJunk:1.0"
+    classpath "com.github.mikaelzero:KotlinJunk:${version}"
 }
 
 
